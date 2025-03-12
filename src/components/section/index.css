@@ -1,0 +1,5 @@
+/* Отключение всех фокус-эффектов у input */
+input:focus,
+input:focus-visible {
+    box-shadow: none !important;
+}

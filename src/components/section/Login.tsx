@@ -1,9 +1,21 @@
 import React from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-
+import { useForm } from "react-hook-form"
+import "./index.css"
 
 const LogIn: React.FC = () => {
+    const { register, handleSubmit, formState: { errors }, watch, reset } = useForm<any>()
+
+    const regExp = {
+        email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        password: /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,}$/,
+    };
+    const onSubmit = (data: any) => {
+        console.log(data)
+        reset()
+        
+    }
     return (
 
         <div className="relative w-full h-screen text-center">
@@ -13,10 +25,27 @@ const LogIn: React.FC = () => {
 
                 <h1 className="text-3xl font-semibold">Sign in to your account</h1>
 
-                <form className="w-full shadow mt-6 p-5 rounded-[10px]">
-                    <Input placeholder="Email" className="text-center h-[50px]" />
+                <form className="w-full shadow mt-6 p-5 rounded-[10px] " onSubmit={handleSubmit(onSubmit)}>
 
-                    <Input placeholder="Password" className="text-center h-[50px] mt-4" />
+
+                    <Input placeholder="Email"
+
+                        {...register("email", { required: true, pattern: regExp.email })}
+                        name="email"
+                        className={`text-center h-[50px] outline-none ${errors.email ? "border-red-600" : "border-gray-300"}`}
+
+
+                    />
+
+                    <Input placeholder="Password"
+                        {...register("password", { required: true, pattern: regExp.password })}
+                        name="password"
+                        className={`text-center h-[50px] mt-4 ${errors.password ? "border-red-600"  : "border-gray-300"}`}
+                    />
+
+
+
+
 
                     <div className="flex items-center justify-between mt-5">
                         <label className="flex gap-2  cursor-pointer">
@@ -25,7 +54,7 @@ const LogIn: React.FC = () => {
                         </label>
                         <p>Forgot password?</p>
                     </div>
-                    <Button variant="outline" className="mt-4 w-full h-[50px] bg-[#2563EB] text-white text-[16px] ">Sign In</Button>
+                     <Button variant="outline" className="mt-4 w-full h-[50px] bg-[#2563EB] text-white text-[16px] ">Sign In</Button>
                 </form>
 
             </div>
