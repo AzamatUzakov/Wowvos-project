@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="main-container flex">
         <Navbar />
-        <div className="right-column">
+        <div className="right-column w-full">
           <Header />  
         </div>
       </div>
