@@ -6,7 +6,7 @@ import "./index.css"
 import { Link } from "react-router-dom";
 
 const LogIn: React.FC = () => {
-    const { register, handleSubmit, formState: { errors }, watch, reset } = useForm<any>()
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<any>()
 
     const regExp = {
         email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
