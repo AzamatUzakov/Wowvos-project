@@ -17,7 +17,7 @@ const Patient: React.FC = () => {
     return (
 
         <section className="">
-            <div className="px-7" >
+            <div className="px-7 pb-3" >
                 <div className="flex items-center gap-11">
                     <h1 className="text-3xl font-semibold">Пациенты</h1>
                     <div className="flex gap-4 items-center">
