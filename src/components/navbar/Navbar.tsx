@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
         <div>
 
 
-            <nav className={`h-screen bg-[#2E2E2E] ${isOpen ? "w-[300px]" : "w-[54px]"} transition-all duration-[400ms] ease-in-out`}>
+            <nav className={`h-screen bg-[#2E2E2E] ${isOpen ? "w-[280px]" : "w-[54px]"} transition-all duration-[400ms] ease-in-out`}>
                 <div className="header-box flex items-center justify-between bg-[#1F1E1E] py-6 px-4">
                     <img src="/logo.png" alt="logo" className={`w-[120px] ${isOpen ? "opacity-100" : "opacity-0  hidden"}`} />
                     <RxHamburgerMenu size={"18px"} color="#F1F2F4" className="cursor-pointer" onClick={() => setIsOpen(!isOpen)} />
