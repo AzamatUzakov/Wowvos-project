@@ -1,19 +1,20 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Home";
 
-import './App.css'
-import Header from './components/header/Header'
-import Navbar from './components/navbar/Navbar'
-function App() {
 
+
+
+interface AppProps { }
+
+const App: React.FC<AppProps> = () => {
   return (
-    <>
-      <div className="main-container flex">
-        <Navbar />
-        <div className="right-column w-full">
-          <Header />  
-        </div>
-      </div>
-    </>
-  )
-}
+    <Routes>
+      <Route element={<Home />} path="/" />
+      {/* <Route element={<Patient/>} path="/products"></Route> */}
+    </Routes>
 
-export default App
+  );
+};
+
+export default App;
