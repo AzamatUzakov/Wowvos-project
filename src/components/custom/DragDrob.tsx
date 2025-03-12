@@ -8,7 +8,7 @@ const DragDrop: React.FC = () => {
 
         <section className="bg-[#f1f2f4] p-3 h-[520px] flex gap-3">
 
-            <div className="card w-[200px] p-3 bg-white rounded-2xl h-[100%]">
+            <div className="card w-[185px] p-3 bg-white rounded-2xl h-[100%]">
 
                 <div className="flex items-end justify-between"><h2 className="font-semibold leading-4">Новое <br /> обращение</h2> <p className=" w-6 h-6 p-1 rounded-3xl bg-[#22B5DC] flex justify-center items-center text-white font-medium">3</p></div>
 
@@ -39,30 +39,29 @@ const DragDrop: React.FC = () => {
 
             </div>
 
-            <div className="card w-[200px] p-3 bg-white rounded-2xl h-[100%]">
+            <div className="card w-[185px] p-3 bg-white rounded-2xl h-[100%]">
 
                 <div className="flex items-end justify-between"><h2 className="font-semibold leading-4">Запрос  <br /> отправлен</h2> <p className=" w-6 h-6 p-1 rounded-3xl bg-[#22B5DC] flex justify-center items-center text-white font-medium">1</p></div>
             </div>
 
-
-            <div className="card w-[200px] p-3 bg-white rounded-2xl h-[100%]">
+            
+            <div className="card w-[185px] p-3 bg-white rounded-2xl h-[100%]">
 
                 <div className="flex items-end justify-between"><h2 className="font-semibold leading-4">В процессе</h2> <p className=" w-6 h-6 p-1 rounded-3xl bg-[#22B5DC] flex justify-center items-center text-white font-medium">4</p></div>
             </div>
 
 
-            <div className="card w-[200px] p-3 bg-white rounded-2xl h-[100%]">
+            <div className="card w-[185px] p-3 bg-white rounded-2xl h-[100%]">
 
                 <div className="flex items-end justify-between"><h2 className="font-semibold leading-4">Забронировал</h2> <p className=" w-6 h-6 p-1 rounded-3xl bg-[#22B5DC] flex justify-center items-center text-white font-medium">1</p></div>
             </div>
 
+            
+               <div className="card w-[185px] p-3 bg-white rounded-2xl h-[100%]">
 
-            <div className="card w-[200px] p-3 bg-white rounded-2xl h-[100%]">
-
-                <div className="flex items-end justify-between"><h2 className="font-semibold leading-4">Выкупил   <br />билеты</h2> <p className=" w-6 h-6 p-1 rounded-3xl bg-[#22B5DC] flex justify-center items-center text-white font-medium">1</p></div>
+                <div className="flex items-end justify-between"><h2 className="font-semibold leading-4">Запрос  <br /> отправлен</h2> <p className=" w-6 h-6 p-1 rounded-3xl bg-[#22B5DC] flex justify-center items-center text-white font-medium">1</p></div>
             </div>
             
-     
 
         </section>
     );
